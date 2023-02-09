@@ -18,3 +18,32 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+.country-list {
+  padding-left: 10px;
+}
+
+.county-list__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.county-list__text {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.country-info__box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.country-info__title {
+  margin: 0;
+}
+
+.country-info__text {
+  margin: 0;
+}
