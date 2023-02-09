@@ -38,14 +38,28 @@ function onCreateEl(data) {
     const murcup = data
       .map(
         ({ name, flags }) =>
-          `<li class="list-item">
+          `<li class="county-list__item">
               <img src="${flags.svg}" alt="#" width="25" />
-              <p class="list-text">${name}</p>
+              <p class="county-list__text">${name}</p>
             </li>`
       )
       .join('');
     list.innerHTML = murcup;
     return;
+  } else if (data.length === 1) {
+    const marcup = data
+      .map(
+        ({ name, flags, population, leanguages, capital }) => `      
+      <div class="country-info__box">
+        <img src="${flags.svg}" alt="#"  width="25"/>
+        <h2 class="country-info__title">${name}</h2>
+        <p class="country-info__text">Capital: ${capital}</p>
+        <p class="country-info__text">Population: ${population}</p>
+        <p class="country-info__text">Leanguages: ${leanguages}</p>
+      </div>`
+      )
+      .join('');
+    box.innerHTML = marcup;
   }
   console.log(data);
 }
